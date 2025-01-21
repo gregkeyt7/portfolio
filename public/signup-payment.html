@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up & Access eBooks</title>
+    <link rel="stylesheet" href="signup.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Subscribe & Access Exclusive eBooks</h1>
+            <p>Unlock a world of knowledge for just $1.99 a month.</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="signup-form">
+            <div class="container">
+                <h2>Create Your Account</h2>
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Create a password" required>
+                    </div>
+                    <h3>Payment Details</h3>
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number:</label>
+                        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+                    </div>
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label for="expiry">Expiry Date:</label>
+                            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Subscribe for $1.99</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="access">
+            <div class="container">
+                <h2>Already Subscribed?</h2>
+                <a href="ebooks.html" class="btn access-btn">Access eBooks</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Thomas Keyt. All rights reserved.</p>
+            <p>Questions? <a href="mailto:thomas.keyt71@gmail.com">info@ebooks.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Basic form validation and redirection after successful "payment"
+        document.getElementById("paymentForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Subscription successful! Redirecting to eBooks page...");
+            window.location.href = "ebooks.html";
+        });
+    </script>
+</body>
+
+</html>
